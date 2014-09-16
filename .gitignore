@@ -1,0 +1,8 @@
+.gradle
+build/
+gradle-app.setting
+
+*.iml
+.idea
+
+maruder
