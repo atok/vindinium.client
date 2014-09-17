@@ -23,3 +23,11 @@ If you are using Intellij Idea, you can just File -> Open -> build.gradle file.
 Class **ExampleBot** contains standard main() function and usage example. The code itself should be self explanatory in the most part. 
 
 Model package contains objects reflecting the structure of Vindinium API responses. Only additional logic is a translation of board markup to **Tile** objects. Tiles are described by TileCategory and who integer.  **Tile.who** describes who is the owner of the mine OR in case of a hero - who he is.
+
+### Building and running from command line
+
+To build it:
+`gradlew build`
+
+To run it:
+`gradlew run`
