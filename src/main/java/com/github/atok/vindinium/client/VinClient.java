@@ -19,10 +19,21 @@ public class VinClient {
 
     private final Gson gson = new Gson();
 
+    /**
+     *
+     * @param key your bots key. Get it here: http://vindinium.org/register
+     */
     public VinClient(String key) {
         this.key = key;
     }
 
+    /**
+     * Calling this method will start a training match. This is a blocking method, all requests are done synchronously.
+     * @param turns how many turns should the match last
+     * @param map what map should be played. Allowed values are: m1, m2, m3, m4, m5, m6 (more: http://vindinium.org/starters)
+     * @param bot an instance of your bot
+     * @param openGameInBrowser if true, the default browser will be launched to show the game
+     */
     public void playTraining(int turns, String map, BotInterface bot, boolean openGameInBrowser) {
         RequestBody params = new FormEncodingBuilder()
                 .add("key", key)
@@ -37,6 +48,11 @@ public class VinClient {
         playLoop(initialState, bot);
     }
 
+    /**
+     * Calling this method will start an arena match. This is a blocking method, all requests are done synchronously.
+     * @param bot an instance of your bot
+     * @param openGameInBrowser if true, the default browser will be launched to show the game
+     */
     public void playArena(BotInterface bot, boolean openGameInBrowser) {
         RequestBody params = new FormEncodingBuilder()
                 .add("key", key)

@@ -14,7 +14,7 @@ public class ExampleBot implements BotInterface {
     }
 
     public static void main(String[] args) {
-        VinClient vinClient = new VinClient("YOUR BOT KEY");
+        VinClient vinClient = new VinClient("YOUR BOT KEY"); // Get one here: http://vindinium.org/register
 //        vinClient.playArena(new ExampleBot(), true);
         vinClient.playTraining(20, "m1", new ExampleBot(), true);
     }
