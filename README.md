@@ -25,9 +25,12 @@ Class **ExampleBot** contains standard main() function and usage example. The co
 Model package contains objects reflecting the structure of Vindinium API responses. Only additional logic is a translation of board markup to **Tile** objects. Tiles are described by TileCategory and who integer.  **Tile.who** describes who is the owner of the mine OR in case of a hero - who he is.
 
 ### Building and running from command line
+Gradle wrapper **gradlew** is included in the project. On some systems it has to be made executable. 
 
-To build it:
-`gradlew build`
+To build it: `./gradlew build` (linux) /  `gradlew build` (windows)
 
-To run it:
-`gradlew run`
+To run it: `./gradlew run` (linux) / `gradlew run` (windows)
+
+
+
+
